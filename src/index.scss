@@ -78,3 +78,49 @@ a:visited {
 		}
 	}
 }
+
+.country-stats {
+	background-color: #181818;
+	min-height: 100vh;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	.country-wrapper {
+		height: 60px;
+		width: 60%;
+		background-color: lightgreen;
+		display: flex;
+
+		.name,
+		.confirmed,
+		.recovered,
+		.deaths {
+			width: 22.5%;
+			line-height: 60px;
+			padding-left: 10px;
+		}
+
+		.flag {
+			width: 10%;
+			background-color: lightblue;
+		}
+
+		.name {
+			background-color: lightcoral;
+		}
+
+		.confirmed {
+			background-color: lightgoldenrodyellow;
+		}
+
+		.recovered {
+			background-color: lightsalmon;
+		}
+
+		.deaths {
+			background-color: lightseagreen;
+		}
+	}
+}

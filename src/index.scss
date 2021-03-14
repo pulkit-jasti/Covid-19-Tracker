@@ -4,3 +4,77 @@
 	box-sizing: border-box;
 	font-family: sans-serif;
 }
+
+a,
+a:active,
+a:visited {
+	color: rgba(255, 255, 255, 0.6);
+
+	&:hover {
+		color: #fff;
+	}
+}
+
+.top-banner {
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+
+	img {
+		position: absolute;
+		width: 100%;
+		filter: grayscale(70%);
+	}
+
+	.overlay {
+		width: 100%;
+		position: relative;
+		padding: 40px 0;
+		background-color: #fd322ec4;
+		color: #fff;
+		text-align: center;
+
+		.heading-wrapper {
+			h1 {
+				font-size: 2.4rem;
+				font-weight: 700;
+			}
+
+			h2 {
+				margin-top: 7px;
+				font-size: 0.9rem;
+				font-weight: 400;
+				color: rgba(255, 255, 255, 0.6);
+			}
+		}
+
+		.stats {
+			width: 100%;
+			margin: 60px 0;
+			display: flex;
+			justify-content: center;
+
+			.stat-wrapper {
+				//background-color: lightcoral;
+
+				.numbers {
+					font-size: 1.8rem;
+				}
+
+				.lable {
+					font-size: 0.9rem;
+					margin-top: 7px;
+					color: rgba(255, 255, 255, 0.6);
+				}
+
+				&:nth-child(2) {
+					margin: 0 250px;
+				}
+			}
+		}
+
+		.date {
+			color: rgba(255, 255, 255, 0.6);
+		}
+	}
+}

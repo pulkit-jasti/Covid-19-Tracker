@@ -1,8 +1,9 @@
 import React from 'react';
+import TopBanner from './components/TopBanner';
 
 class App extends React.Component {
 	render() {
-		return <div>Yup, the first run is working</div>;
+		return <TopBanner />;
 	}
 }
 

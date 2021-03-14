@@ -30,7 +30,7 @@ a:visited {
 		width: 100%;
 		position: relative;
 		padding: 40px 0;
-		background-color: #fd322ec4;
+		background-color: rgba(253, 50, 46, 0.769);
 		color: #fff;
 		text-align: center;
 
@@ -79,6 +79,17 @@ a:visited {
 	}
 }
 
+.info-container {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	.table-header {
+		background-color: #e93835;
+	}
+}
+
 .country-stats {
 	background-color: #181818;
 	min-height: 100vh;
@@ -86,11 +97,12 @@ a:visited {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	color: #fff;
 
 	.country-wrapper {
 		height: 60px;
 		width: 60%;
-		background-color: lightgreen;
+		//background-color: lightgreen;
 		display: flex;
 
 		.name,
@@ -104,23 +116,23 @@ a:visited {
 
 		.flag {
 			width: 10%;
-			background-color: lightblue;
+			//background-color: lightblue;
 		}
 
 		.name {
-			background-color: lightcoral;
+			//background-color: lightcoral;
 		}
 
 		.confirmed {
-			background-color: lightgoldenrodyellow;
+			//background-color: lightgoldenrodyellow;
 		}
 
 		.recovered {
-			background-color: lightsalmon;
+			//background-color: lightsalmon;
 		}
 
 		.deaths {
-			background-color: lightseagreen;
+			//background-color: lightseagreen;
 		}
 	}
 }

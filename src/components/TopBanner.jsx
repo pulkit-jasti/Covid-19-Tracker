@@ -71,11 +71,7 @@ class TopBanner extends React.Component {
 							<p className='lable'>Total Deaths</p>
 						</div>
 					</div>
-					<div className='date'>
-						{/* Last Updated: {this.state.data.lastUpdate} */}
-						{/* {moment().format('dddd, MMMM Do YYYY, h:mm:ss a')} */}
-						Last Updated: {moment.parseZone(this.state.data.lastUpdate).format('dddd, MMMM Do YYYY, h:mm A')}
-					</div>
+					<div className='date'>Last Updated: {moment.parseZone(this.state.data.lastUpdate).format('dddd, MMMM Do YYYY, h:mm A')}</div>
 				</div>
 			</div>
 		);

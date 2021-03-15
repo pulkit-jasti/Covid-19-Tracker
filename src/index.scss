@@ -1,11 +1,17 @@
+$accent-color: #e93835;
+
+@mixin flexCenter {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 	font-family: sans-serif;
 }
-
-$accent-color: #e93835;
 
 a,
 a:active,
@@ -36,6 +42,10 @@ a:visited {
 		color: #fff;
 		text-align: center;
 
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
 		.heading-wrapper {
 			h1 {
 				font-size: 2.4rem;
@@ -51,14 +61,12 @@ a:visited {
 		}
 
 		.stats {
-			width: 100%;
+			width: 70%;
 			margin: 60px 0;
 			display: flex;
-			justify-content: center;
+			justify-content: space-between;
 
 			.stat-wrapper {
-				//background-color: lightcoral;
-
 				.numbers {
 					font-size: 1.8rem;
 				}
@@ -67,10 +75,6 @@ a:visited {
 					font-size: 0.9rem;
 					margin-top: 7px;
 					color: rgba(255, 255, 255, 0.6);
-				}
-
-				&:nth-child(2) {
-					margin: 0 250px;
 				}
 			}
 		}
@@ -128,9 +132,8 @@ a:visited {
 	}
 
 	.country-wrapper {
-		height: 60px;
+		min-height: 60px;
 		width: 65%;
-		//background-color: lightgreen;
 		display: flex;
 		border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 
@@ -145,13 +148,14 @@ a:visited {
 
 		.name {
 			width: 30%;
+			line-height: unset;
+			@include flexCenter();
+			justify-content: flex-start;
 		}
 
 		.flag {
 			width: 10%;
-			display: flex;
-			align-items: center;
-			justify-content: center;
+			@include flexCenter();
 		}
 	}
 }

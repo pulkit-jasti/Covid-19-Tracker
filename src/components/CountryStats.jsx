@@ -28,7 +28,7 @@ class CountryStats extends React.Component {
 		var searchValue = e.target.value;
 		this.setState(prevState => {
 			let filterList = prevState.fullList.filter(el => {
-				return el.country.search(new RegExp(searchValue, 'i')) != -1;
+				return el.country.search(new RegExp(searchValue, 'i')) !== -1;
 			});
 			return { displayList: filterList };
 		});
@@ -127,7 +127,7 @@ class CountryStats extends React.Component {
 }
 
 function Sort(arr, key, operation) {
-	if (operation == 'L-H') {
+	if (operation === 'L-H') {
 		for (let i = 0; i < arr.length; i++) {
 			for (let j = 0; j < arr.length - 1; j++) {
 				if (arr[j][key] > arr[j + 1][key]) {
@@ -135,7 +135,7 @@ function Sort(arr, key, operation) {
 				}
 			}
 		}
-	} else if (operation == 'H-L') {
+	} else if (operation === 'H-L') {
 		for (let i = 0; i < arr.length; i++) {
 			for (let j = 0; j < arr.length - 1; j++) {
 				if (arr[j][key] < arr[j + 1][key]) {

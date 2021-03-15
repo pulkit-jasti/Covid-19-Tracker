@@ -3,10 +3,6 @@ import ReactCountryFlag from 'react-country-flag';
 import NumberFormat from 'react-number-format';
 
 class Country extends React.Component {
-	constructor(props) {
-		super(props);
-	}
-
 	render() {
 		return (
 			<div className='country-wrapper'>
@@ -21,7 +17,9 @@ class Country extends React.Component {
 						aria-label='United States'
 					/>
 				</div>
-				<div className='name'>{this.props.countryName}</div>
+				<div className='name'>
+					<p>{this.props.countryName}</p>
+				</div>
 				<div className='confirmed'>
 					<NumberFormat value={this.props.confirmed} displayType={'text'} thousandSeparator={true} thousandsGroupStyle='lakh' />
 				</div>

@@ -140,7 +140,7 @@ a:visited {
 		.deaths {
 			width: 20%;
 			line-height: 60px;
-			padding-left: 10px;
+			padding-left: 20px;
 		}
 
 		.name {
@@ -149,6 +149,9 @@ a:visited {
 
 		.flag {
 			width: 10%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
 		}
 	}
 }

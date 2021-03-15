@@ -109,7 +109,16 @@ class CountryStats extends React.Component {
 
 				<div className='list-container'>
 					{this.state.displayList.map((el, index) => {
-						return <Country key={index} countryName={el.country} confirmed={el.confirmed} recovered={el.recovered} deaths={el.deaths} />;
+						return (
+							<Country
+								key={index}
+								countryName={el.country}
+								confirmed={el.confirmed}
+								recovered={el.recovered}
+								deaths={el.deaths}
+								countryCode={el.code}
+							/>
+						);
 					})}
 				</div>
 			</div>

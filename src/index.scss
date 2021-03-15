@@ -5,6 +5,8 @@
 	font-family: sans-serif;
 }
 
+$accent-color: #e93835;
+
 a,
 a:active,
 a:visited {
@@ -84,9 +86,30 @@ a:visited {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	padding: 20px 0;
 
 	.table-header {
-		background-color: #e93835;
+		background-color: $accent-color;
+		font-weight: 600;
+		font-size: 1.05rem;
+		letter-spacing: 1px;
+	}
+
+	.search-wrapper {
+		width: 65%;
+		display: flex;
+		margin-bottom: 30px;
+
+		input {
+			width: 100%;
+			margin-right: 20px;
+			padding: 0 15px;
+			color: #fff;
+			background-color: #242424;
+			font-size: 1.1rem;
+			border: none;
+			outline: none;
+		}
 	}
 }
 
@@ -94,45 +117,104 @@ a:visited {
 	background-color: #181818;
 	min-height: 100vh;
 	width: 100%;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+	padding: 50px 0;
 	color: #fff;
+
+	.list-container {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
 
 	.country-wrapper {
 		height: 60px;
-		width: 60%;
+		width: 65%;
 		//background-color: lightgreen;
 		display: flex;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 
 		.name,
 		.confirmed,
 		.recovered,
 		.deaths {
-			width: 22.5%;
+			width: 20%;
 			line-height: 60px;
 			padding-left: 10px;
 		}
 
+		.name {
+			width: 30%;
+		}
+
 		.flag {
 			width: 10%;
-			//background-color: lightblue;
-		}
-
-		.name {
-			//background-color: lightcoral;
-		}
-
-		.confirmed {
-			//background-color: lightgoldenrodyellow;
-		}
-
-		.recovered {
-			//background-color: lightsalmon;
-		}
-
-		.deaths {
-			//background-color: lightseagreen;
 		}
 	}
+}
+
+/*  Select options styles  */
+
+/* Reset Select */
+select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-ms-appearance: none;
+	appearance: none;
+	outline: 0;
+	box-shadow: none;
+	border: 0 !important;
+	background: #242424;
+	background-image: none;
+}
+
+/* Remove IE arrow */
+select::-ms-expand {
+	display: none;
+}
+
+/* Custom Select */
+.select {
+	position: relative;
+	display: flex;
+	height: 50px;
+	width: 400px !important;
+	line-height: 3;
+	overflow: hidden;
+}
+
+select {
+	flex: 1;
+	padding: 0 15px;
+	color: rgba(255, 255, 255, 0.4);
+	cursor: pointer;
+	font-size: 1.1rem;
+
+	option {
+		margin: 10px;
+		color: rgba(255, 255, 255, 0.6);
+		padding: 5px;
+		font-size: 1rem !important;
+	}
+}
+
+/* Arrow */
+.select::after {
+	content: '\25BC';
+	position: absolute;
+	height: 100%;
+	//top: 10px;
+	right: 0;
+	padding: 0 1em;
+	background: #242424;
+	cursor: pointer;
+	pointer-events: none;
+	-webkit-transition: 0.25s all ease;
+	-o-transition: 0.25s all ease;
+	transition: 0.25s all ease;
+}
+
+/* Transition */
+.select:hover::after {
+	color: $accent-color;
 }

@@ -98,6 +98,9 @@ class CountryStats extends React.Component {
 							</select>
 						</div>
 					</div>
+				</div>
+
+				<div className='list-container'>
 					<div className='table-header country-wrapper'>
 						<div className='flag'></div>
 						<div className='name'>Country</div>
@@ -105,9 +108,6 @@ class CountryStats extends React.Component {
 						<div className='recovered'>Recovered</div>
 						<div className='deaths'>Deaths</div>
 					</div>
-				</div>
-
-				<div className='list-container'>
 					{this.state.displayList.map((el, index) => {
 						return (
 							<Country

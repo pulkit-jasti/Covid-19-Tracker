@@ -65,6 +65,7 @@ a:visited {
 			margin: 60px 0;
 			display: flex;
 			justify-content: space-between;
+			flex-wrap: wrap;
 
 			.stat-wrapper {
 				.numbers {
@@ -91,13 +92,6 @@ a:visited {
 	flex-direction: column;
 	align-items: center;
 	padding: 20px 0;
-
-	.table-header {
-		background-color: $accent-color;
-		font-weight: 600;
-		font-size: 1.05rem;
-		letter-spacing: 1px;
-	}
 
 	.search-wrapper {
 		width: 65%;
@@ -129,6 +123,13 @@ a:visited {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+
+		.table-header {
+			background-color: $accent-color;
+			font-weight: 600;
+			font-size: 1.05rem;
+			letter-spacing: 1px;
+		}
 	}
 
 	.country-wrapper {
@@ -156,6 +157,51 @@ a:visited {
 		.flag {
 			width: 10%;
 			@include flexCenter();
+		}
+	}
+}
+
+@media screen and (max-width: 700px) {
+	.top-banner {
+		img {
+			width: unset;
+			height: 100%;
+		}
+
+		.overlay {
+			.stats {
+				flex-direction: column;
+
+				.stat-wrapper {
+					margin: 15px 0;
+				}
+			}
+		}
+	}
+
+	.info-container {
+		position: relative;
+		overflow-y: scroll;
+		.search-wrapper {
+			width: 90%;
+		}
+	}
+
+	.country-stats {
+		.country-wrapper {
+			width: 150%;
+		}
+
+		.list-container {
+			padding: 0 10px;
+			position: relative;
+			overflow-y: scroll;
+			align-items: flex-start;
+
+			.table-header {
+				font-size: 1rem;
+				font-weight: normal;
+			}
 		}
 	}
 }

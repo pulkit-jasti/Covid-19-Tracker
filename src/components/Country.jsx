@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactCountryFlag from 'react-country-flag';
+import NumberFormat from 'react-number-format';
 
 class Country extends React.Component {
 	constructor(props) {
@@ -21,9 +22,15 @@ class Country extends React.Component {
 					/>
 				</div>
 				<div className='name'>{this.props.countryName}</div>
-				<div className='confirmed'>{this.props.confirmed}</div>
-				<div className='recovered'>{this.props.recovered}</div>
-				<div className='deaths'>{this.props.deaths}</div>
+				<div className='confirmed'>
+					<NumberFormat value={this.props.confirmed} displayType={'text'} thousandSeparator={true} thousandsGroupStyle='lakh' />
+				</div>
+				<div className='recovered'>
+					<NumberFormat value={this.props.recovered} displayType={'text'} thousandSeparator={true} thousandsGroupStyle='lakh' />
+				</div>
+				<div className='deaths'>
+					<NumberFormat value={this.props.deaths} displayType={'text'} thousandSeparator={true} thousandsGroupStyle='lakh' />
+				</div>
 			</div>
 		);
 	}

@@ -1,4 +1,5 @@
 import React from 'react';
+import CountUp from 'react-countup';
 
 class TopBanner extends React.Component {
 	state = {
@@ -51,15 +52,21 @@ class TopBanner extends React.Component {
 					</div>
 					<div className='stats'>
 						<div className='stat-wrapper'>
-							<p className='numbers'>{this.state.data.confirmed}</p>
+							<p className='numbers'>
+								<CountUp end={this.state.data.confirmed} duration={3} separator=',' />
+							</p>
 							<p className='lable'>Total Confirmed</p>
 						</div>
 						<div className='stat-wrapper'>
-							<p className='numbers'>{this.state.data.recovered}</p>
+							<p className='numbers'>
+								<CountUp end={this.state.data.recovered} duration={3} separator=',' />
+							</p>
 							<p className='lable'>Total Recovered</p>
 						</div>
 						<div className='stat-wrapper'>
-							<p className='numbers'>{this.state.data.deaths}</p>
+							<p className='numbers'>
+								<CountUp end={this.state.data.deaths} duration={3} separator=',' />
+							</p>
 							<p className='lable'>Total Deaths</p>
 						</div>
 					</div>
